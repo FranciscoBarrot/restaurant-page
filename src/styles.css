@@ -3,20 +3,54 @@
   src: url(https://fonts.googleapis.com/css2?family=Redressed&display=swap);
 }
 
+/* BODY */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
+html {
+  height: 100%;
+}
 body {
-  background-color: #222;
+  background-color: #000;
   color: #fff;
   font-family: 'Redressed', cursive;
+  height: 100%;
+}
+
+#content {
+  height: 100%;
+}
+
+/* MAIN */
+.main {
+  position: relative;
+  height: 100%;
+}
+
+.main::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: url('https://www.demoslavueltaaldia.com/sites/default/files/pizza_margarita.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.main-content {
+  position: relative;
+  text-align: center;
 }
 
 .title-container {
-  margin: auto;
+  text-align: center;
 }
 .title {
   font-size: 15vw;
