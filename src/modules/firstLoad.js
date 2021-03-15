@@ -1,16 +1,7 @@
 import { createElementWithClass } from './tools'
 
-function websiteLauncher() {
-  const main = createElementWithClass('div', 'main')
-  const mainContent = createElementWithClass('div', 'main-content')
-  const navBar = createElementWithClass('div', 'nav-bar')
-  const titleContaier = createElementWithClass('div', 'title-container')
-  const h2 = createElementWithClass('h2', 'title')
-  const descriptionContainer = createElementWithClass(
-    'div',
-    'description-container'
-  )
-  const p = createElementWithClass('p', 'description')
+function navBar() {
+  const nav = createElementWithClass('div', 'nav-bar')
 
   const ul = createElementWithClass('ul', 'nav-ul')
   const home = createElementWithClass('li', 'home', 'navItem')
@@ -20,17 +11,31 @@ function websiteLauncher() {
   home.textContent = 'Home'
   menu.textContent = 'Menu'
   contact.textContent = 'Contact'
-  h2.textContent = 'Margheriti'
-  p.textContent = 'Best pizzas in Italy since 1902'
 
   ul.appendChild(home)
   ul.appendChild(menu)
   ul.appendChild(contact)
-  navBar.appendChild(ul)
+  nav.appendChild(ul)
+
+  return nav
+}
+
+function websiteLauncher() {
+  const main = createElementWithClass('div', 'main', 'home')
+  const mainContent = createElementWithClass('div', 'main-content')
+  const titleContaier = createElementWithClass('div', 'title-container')
+  const h2 = createElementWithClass('h2', 'title')
+  const descriptionContainer = createElementWithClass(
+    'div',
+    'description-container'
+  )
+  const p = createElementWithClass('p', 'description')
+
+  h2.textContent = 'Margheriti'
+  p.textContent = 'Best pizzas in Italy since 1902'
 
   descriptionContainer.appendChild(p)
   titleContaier.appendChild(h2)
-  mainContent.appendChild(navBar)
   mainContent.appendChild(titleContaier)
   mainContent.appendChild(descriptionContainer)
 
@@ -38,4 +43,4 @@ function websiteLauncher() {
 
   return main
 }
-export default websiteLauncher
+export { websiteLauncher, navBar }

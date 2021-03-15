@@ -21,15 +21,9 @@ body {
 
 #content {
   height: 100%;
-}
-
-/* MAIN */
-.main {
   position: relative;
-  height: 100%;
 }
-
-.main::before {
+#content::before {
   content: ' ';
   display: block;
   position: absolute;
@@ -44,6 +38,10 @@ body {
   background-size: cover;
 }
 
+/* MAIN */
+.main {
+  position: relative;
+}
 .main-content {
   position: relative;
   text-align: center;
@@ -72,6 +70,7 @@ body {
 
 /* NAV BAR */
 .nav-bar {
+  position: relative;
   background-color: #000;
   color: #fff;
   margin-bottom: 2em;
@@ -95,4 +94,19 @@ body {
 
 .nav-ul li:hover {
   border-bottom: 1px solid red;
+}
+
+/* Concact */
+.contact-page {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+}
+/* img */
+.img-container {
+  margin: auto;
+}
+
+.img-container img {
+  border-radius: 50%;
 }
