@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Redressed', cursive;
-  src: url(https://fonts.googleapis.com/css2?family=Redressed&display=swap);
+  font-family: 'Tangerine', cursive;
+  src: url(https://fonts.googleapis.com/css2?family=Tangerine&display=swap);
 }
 
 /* BODY */
@@ -15,7 +15,7 @@ html {
 body {
   background-color: #000;
   color: #fff;
-  font-family: 'Redressed', cursive;
+  font-family: 'Tangerine', cursive;
   height: 100%;
 }
 
@@ -54,7 +54,8 @@ body {
   text-align: center;
 }
 .title {
-  font-size: 15vw;
+  font-size: 10vw;
+  cursor: default;
 }
 
 /* DESCRIPTION */
@@ -64,4 +65,34 @@ body {
   border: 2px solid #000;
   margin: auto;
   margin-top: 5vh;
+}
+.description {
+  cursor: default;
+}
+
+/* NAV BAR */
+.nav-bar {
+  background-color: #000;
+  color: #fff;
+  margin-bottom: 2em;
+  height: 6vh;
+}
+
+.nav-ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: auto;
+  width: 30%;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 2px 0;
+}
+
+.nav-ul li {
+  cursor: pointer;
+}
+
+.nav-ul li:hover {
+  border-bottom: 1px solid red;
 }

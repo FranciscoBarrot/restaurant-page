@@ -1,7 +1,9 @@
-function createElementWithAClass(name, elementClassName) {
+function createElementWithClass(name, ...elementClassName) {
   const element = document.createElement(name)
-  element.classList.add(elementClassName)
+  elementClassName.forEach((className) => {
+    element.classList.add(className)
+  })
   return element
 }
 
-export { createElementWithAClass }
+export { createElementWithClass }
