@@ -32,7 +32,7 @@ function websiteLauncher() {
   const p = createElementWithClass('p', 'description')
 
   h2.textContent = 'Margheriti'
-  p.textContent = 'Best pizzas in Italy since 1902'
+  p.textContent = 'Best pizzas in Italy since 1946'
 
   descriptionContainer.appendChild(p)
   titleContaier.appendChild(h2)
